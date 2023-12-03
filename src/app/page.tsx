@@ -1,5 +1,8 @@
-export default function Home() {
-  return (
-    <h1>Baby I&apos;m back, yeah</h1>
-  )
+export default async function Home() {
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+
+  const response = await fetch('https://api.github.com/users/hnascx')
+  const user = await response.json()
+
+  return <pre>{JSON.stringify(user)}</pre>
 }
