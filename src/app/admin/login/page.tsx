@@ -1,5 +1,3 @@
 export default function LoginAdmin() {
-  return (
-    <h1>LoginAdmin</h1>
-  )
+  return <h1>LoginAdmin</h1>
 }
